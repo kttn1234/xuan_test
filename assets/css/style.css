@@ -721,21 +721,14 @@ img.alignleft {
     border: 0.01rem solid #fff;
   }
 }
-.header__scroll-icon img {
-  transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-}
 @media (min-width: 768px) {
   .header__scroll-icon img {
-    width: 0.5625rem;
+    width: 0.5rem;
   }
 }
 @media (max-width: 767px) {
   .header__scroll-icon img {
-    width: 0.09rem;
+    width: 0.08rem;
   }
 }
 

@@ -151,16 +151,11 @@
             border: .01rem solid $white;
         }
         img {
-            transform: rotate(90deg);
-            -webkit-transform: rotate(90deg);
-            -moz-transform: rotate(90deg);
-            -ms-transform: rotate(90deg);
-            -o-transform: rotate(90deg);
             @include mq(md, min) {
-                width: rem(9px);
+                width: rem(8px);
             }
             @include mq(md, max) {
-                width: .09rem;
+                width: .08rem;
             }
         }
     }
