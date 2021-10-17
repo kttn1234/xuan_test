@@ -29,6 +29,12 @@
     padding-top: 0.16rem;
   }
 }
+@media (min-width: 768px) {
+  .register__detail {
+    flex: 1;
+    padding-right: 0.625rem;
+  }
+}
 .register__title {
   font-family: "Shippori Mincho", serif;
   font-weight: 600;
@@ -179,8 +185,6 @@
 @media (min-width: 768px) {
   .information__detail {
     padding: 0.4375rem;
-    flex: 1;
-    padding-right: 0.625rem;
   }
 }
 @media (max-width: 767px) {

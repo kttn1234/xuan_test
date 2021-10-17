@@ -50,6 +50,9 @@
         margin: auto;
         
         @include mq(md, min) {
+            width: calc(100% - 1.875rem);
+        }
+        @include mq(lg, min) {
             width: rem(820px);
         }
         @include mq(md, max) {

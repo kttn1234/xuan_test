@@ -25,6 +25,12 @@
             padding-top: .16rem;
         }
     }
+    &__detail {
+        @include mq(md, min) {
+            flex: 1;
+            padding-right: rem(10px);
+        }
+    }
     &__title {
         font-family: $font-shipporiMincho;
         font-weight: $font-semi-bold;
@@ -157,8 +163,6 @@
         transition: all .3s ease-out;
         @include mq(md, min) {
             padding: rem(7px);
-            flex: 1;
-            padding-right: rem(10px);
         }
         @include mq(md, max) {
             padding: .03rem;

@@ -1161,6 +1161,11 @@ select::-ms-expand {
 }
 @media (min-width: 768px) {
   .modal__wrapper {
+    width: calc(100% - 1.875rem);
+  }
+}
+@media (min-width: 992px) {
+  .modal__wrapper {
     width: 51.25rem;
   }
 }
