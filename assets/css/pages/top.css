@@ -88,8 +88,8 @@
   .information::before {
     background-size: 100% auto !important;
     background-position: 0 0 !important;
-    width: calc((100vw - 1100px) / 2 + 97px);
-    height: calc((100vw - 1100px) / 2 + 97px);
+    width: calc((100vw - 68.75rem) / 2 + 6.0625rem);
+    height: calc((100vw - 68.75rem) / 2 + 6.0625rem);
     top: -1.3125rem;
   }
 }
@@ -122,8 +122,8 @@
   .information::after {
     background-size: 100% auto !important;
     background-position: 0 0 !important;
-    width: calc((100vw - 1100px) / 2 + 97px);
-    height: calc((100vw - 1100px) / 2 + 97px);
+    width: calc((100vw - 68.75rem) / 2 + 6.0625rem);
+    height: calc((100vw - 68.75rem) / 2 + 6.0625rem);
   }
 }
 @media (max-width: 767px) {

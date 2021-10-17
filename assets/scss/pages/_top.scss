@@ -76,8 +76,8 @@
         @media print and (min-width: 1130px), (min-width: 768px) and (min-width: 1130px) {
             background-size: 100% auto !important;
             background-position: 0 0 !important;
-            width: calc((100vw - 1100px) / 2 + 97px);
-            height: calc((100vw - 1100px) / 2 + 97px);
+            width: calc((100vw - 68.75rem) / 2 + 6.0625rem);
+            height: calc((100vw - 68.75rem) / 2 + 6.0625rem);
             top: rem(-21px);
         }
         @include mq(md, max) {
@@ -104,8 +104,8 @@
         @media print and (min-width: 1130px), (min-width: 768px) and (min-width: 1130px) {
             background-size: 100% auto !important;
             background-position: 0 0 !important;
-            width: calc((100vw - 1100px) / 2 + 97px);
-            height: calc((100vw - 1100px) / 2 + 97px);
+            width: calc((100vw - 68.75rem) / 2 + 6.0625rem);
+            height: calc((100vw - 68.75rem) / 2 + 6.0625rem);
         }
         @include mq(md, max) {
             background: url(../../img/top/icon_info_01.png) no-repeat center;
