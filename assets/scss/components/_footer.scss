@@ -1,0 +1,161 @@
+.footer {
+    background: $brown-02;
+    &__copyright {
+        font-family: $font-shipporiMincho;
+    }
+}
+@include mq(md, min) {
+    .footer {
+        padding: rem(50px) 0 rem(40px);
+        &__group {
+            display: flex;
+            flex-wrap: wrap;
+            border-bottom: rem(1px) solid $brown-03;
+            padding-bottom: rem(41px);
+        }
+        &__item {
+            &:nth-child(1) {
+                width: 48%;
+            }
+            &:nth-child(2) {
+                width: 28.363%;
+                padding-left: rem(32px);
+                padding-right: rem(5px);
+            }
+            &:nth-child(3) {
+                width: 23.637%;
+                position: relative;
+            }
+        }
+        &__title {
+            color: $white;
+            font-weight: $font-weight-regular;
+            @include font-size(18px);
+            line-height: line-height(24,18);
+            margin-bottom: rem(32px);
+        }
+        &__link {
+            color: $brown-03;
+            &--main {
+                @include font-size(14px);
+                line-height: line-height(20,14);
+                margin: rem(-10px) rem(-14.5px);
+                li {
+                    display: inline-block;
+                    position: relative;
+                    padding: rem(10px) rem(14.5px);
+                    &:not(:last-child):after {
+                        content: '';
+                        height: rem(14px);
+                        width: rem(1px);
+                        display: inline-block;
+                        position: absolute;
+                        background: $brown-03;
+                        right: rem(-2px);
+                        top: 0;
+                        bottom: 0;
+                        margin: auto;
+                        
+                    }
+                    
+                    
+                }
+
+            }
+            &--about {
+                @include font-size(15px);
+                line-height: line-height(21,15);
+                font-weight: $font-weight-medium;
+                li {
+                    & + li {
+                        margin-top: rem(24px);
+                    }
+                }
+            }
+            
+            a {
+                transition: all .3s ease-out;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        &__btn {
+           li {
+               & + li {
+                   margin-top: rem(24px);
+               }
+           }
+        }
+        &__social {
+            display: flex;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            li {
+                & + li {
+                    margin-left: rem(30px);
+                }
+            }
+            
+        }
+        &__bottom {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row-reverse;
+            align-items: center;
+            margin-top: rem(32px);
+            .footer__link--main {
+                @include font-size(15px);
+                line-height: line-height(21,15);
+            }
+        }
+        &__copyright {
+            @include font-size(15px);
+        }
+        .btn--main {
+            @include font-size(15px);
+            line-height: line-height(15,22);
+            height: rem(56px);
+            &::before {
+                width: rem(33px);
+            }
+            &::after {
+                right: rem(12px);
+            }
+        }
+    }
+}
+@include mq(xl, min) {
+    .footer__link--main li {
+        &:nth-child(13){       
+            margin-right: rem(40px)
+        }
+    }
+    
+}
+@include mq(md, max) {
+    .footer {
+        padding: .32rem 0 .32rem;
+        &__bottom {
+            font-family: $font-shipporiMincho;
+            color: $white;
+        }
+        &__link--main {
+            font-size: .13rem;
+            line-height: line-height(19,13);
+            font-weight: $font-weight-medium;
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: .39rem;
+            li:not(:last-child) {
+                margin: 0 .32rem .25rem 0;
+            }
+        }
+        &__copyright {
+            font-size: .13rem;
+            line-height: line-height(19,13);
+            font-weight: $font-weight-regular;
+        }
+    }
+}

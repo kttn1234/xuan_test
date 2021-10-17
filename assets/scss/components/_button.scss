@@ -1,0 +1,174 @@
+.btn {
+    font-family: $font-shipporiMincho;
+    position: relative;
+    display: flex;
+    align-items: center;
+    transition: all .3s ease-out;
+    &--main {
+        font-weight: $font-semi-bold;
+        color: $input-color;
+        background-color: $input-bg;
+        opacity: .88;
+        @include mq(md, min) {
+            height: rem($input-height);
+            @include font-size(18px);
+            line-height: line-height(26,18);
+            padding: rem($input-padding-y) rem(45px) rem($input-padding-y) rem($input-padding-x);
+        }
+        @include mq(md, max) {
+            height:.44rem;
+            font-size: .16rem;
+            line-height: line-height(24,16);
+            padding: .05rem .45rem;
+            justify-content: center;
+        }
+        &::before {
+            content: '';
+            background: rgb(142,98,0);
+            background: linear-gradient(0deg, rgba(142,98,0,1) 0%, rgba(226,162,22,0.88) 100%);
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            z-index: 1;
+            height: 100%;
+            @include mq(md, min) {
+                width: rem(40px);
+            }
+            @include mq(md, max) {
+                width: .32rem;
+            }
+        }
+        &::after {
+            content: '';
+            background: url(../img/common/icon_arrow_right_01.png) no-repeat;
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            z-index: 2;
+            @include mq(md, min) {
+                width: rem(9px);
+                height: rem(8px);
+                background-size: rem(9px) auto;
+                right: rem(15px);
+            }
+            @include mq(md, max) {
+                width: .09rem;
+                height: .08rem;
+                background-size: .09rem auto;
+                right: .11rem;
+            }
+        }
+        
+        @include hover() {
+            color: $yellow-02;
+            text-decoration: none;
+        }
+    }
+    &--more {
+        
+        color: $white;
+        @include mq(md, min) {
+            font-weight: $font-weight-medium;
+            width: rem(218px);
+            height: rem(64px);
+            border: rem(1px) solid $white;
+            padding: rem(5px) rem(24px);
+            @include font-size(18px);
+            line-height: line-height(26,18);
+        }
+        @include mq(md, max) {
+            height: .53rem;
+            width: 1.97rem;
+            font-size: .16rem;
+            font-weight: $font-semi-bold;
+            line-height: line-height(24,16);
+            padding: .05rem .16rem;
+            border: .01rem solid $white;
+            margin: auto;
+        }
+        span {
+            &::after {
+                content: '';
+                background: url(../img/common/icon_arrow_right_01.png) no-repeat;
+                display: inline-block;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                z-index: 2;
+                @include mq(md, min) {
+                    width: rem(9px);
+                    height: rem(8px);
+                    background-size: rem(9px) auto;
+                    right: rem(20px);
+                }
+                @include mq(md, max) {
+                    width: .09rem;
+                    height: .08rem;
+                    background-size: .09rem auto;
+                    right: .11rem;
+                }
+            }
+        }
+        &::before {
+            content: '';
+            opacity: .8;
+            display: block;
+            z-index: -1;
+            mix-blend-mode: soft-light;
+            background: $white;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;            
+            @include ie {
+                background: rgb(113,93,33);
+                background: linear-gradient(90deg, rgba(113,93,33,0.5) 0%, rgba(105,84,28,0.5) 50%, rgba(100,78,25,0.5) 100%);
+            }
+        }
+        &::after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            @include mq(md, min) {
+                top: rem(2px);
+                left: rem(2px);
+                border: rem(1px) solid $white;
+            }
+            @include mq(md, max) {
+                top: .03rem;
+                left: .03rem;
+                border: .01rem solid $white;
+            }
+        }
+        
+        &:hover {
+            span{
+                opacity: .7;
+            }
+            
+        }
+    }
+  
+    &:focus,
+    &.focus {
+        outline: 0;
+    }
+  
+    // Disabled comes first so active can properly restyle
+    &.disabled,
+    &:disabled {
+        opacity: $btn-disabled-opacity;
+    }
+  
+    &:not(:disabled):not(.disabled) {
+        cursor: pointer;
+    }
+}

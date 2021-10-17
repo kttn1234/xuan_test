@@ -1,0 +1,199 @@
+@import '../common/variables';
+@import '../common/mixin';
+// section register
+.register {
+    background-size: cover;
+    color: $white;
+    position: relative;
+    z-index: 2;
+    @include mq(md, min) {
+        background-image: url(../../img/top/bg_01_pc.jpg);
+    }
+    @include mq(md, max) {
+        background-image: url(../../img/top/bg_01_sp.jpg);
+        height: 1.9rem;
+    }
+    &__content {
+        @include mq(md, min) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-right: rem(3px);
+            height: rem(147px);
+        }
+        @include mq(md, max) {
+            padding-top: .16rem;
+        }
+    }
+    &__title {
+        font-family: $font-shipporiMincho;
+        font-weight: $font-semi-bold;
+        @include mq(md, min) {
+            @include font-size(24px);
+            line-height: line-height(35,24);
+            margin-bottom: rem(8px);
+        }
+        @include mq(md, max) {
+            font-size: .2rem;
+            line-height: line-height(29,20);
+            text-align: center;
+            margin-bottom: .08rem;
+        }
+    }
+    &__text {
+        @include mq(md, max) {
+            text-align: center;
+            margin-bottom: .2rem;
+        }
+    }
+    .btn--more {
+        margin-top: -3px;
+    }
+}
+// section information
+.information {
+    position: relative;
+    overflow: hidden;
+    &::before {
+        content: '';
+        background: url(../../img/top/icon_info_01.png) no-repeat center;
+        display: inline-block;
+        position: absolute;
+        z-index: 1;
+        @include mq(md, min) {
+            width: rem(234px);
+            height: rem(205px);
+            background-size: rem(234px) auto;
+            left: 0;
+            top: rem(-21px);
+        }
+        @media print and (min-width: 1130px), (min-width: 768px) and (min-width: 1130px) {
+            background-size: 100% auto !important;
+            background-position: 0 0 !important;
+            width: calc((100vw - 1100px) / 2 + 97px);
+            height: calc((100vw - 1100px) / 2 + 97px);
+            top: rem(-21px);
+        }
+        @include mq(md, max) {
+            width: 1.73rem;
+            height: 1.52rem;
+            background-size: 1.73rem auto;
+            top: -0.24rem;
+            left: -0.48rem;
+        }
+    }
+    &::after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        z-index: 1;
+        @include mq(md, min) {
+            background: url(../../img/top/icon_info_02.png) no-repeat center;
+            width: rem(230px);
+            height: rem(183px);
+            background-size: rem(230px) auto;
+            right: 0;
+            bottom: 0;
+        }
+        @media print and (min-width: 1130px), (min-width: 768px) and (min-width: 1130px) {
+            background-size: 100% auto !important;
+            background-position: 0 0 !important;
+            width: calc((100vw - 1100px) / 2 + 97px);
+            height: calc((100vw - 1100px) / 2 + 97px);
+        }
+        @include mq(md, max) {
+            background: url(../../img/top/icon_info_01.png) no-repeat center;
+            width: 1.73rem;
+            height: 1.52rem;
+            background-size: 1.73rem auto;
+            bottom: -0.07rem;
+            right: -0.48rem;
+        }
+    }
+    &__list {
+        position: relative;
+        z-index: 2;
+        @include mq(md, min) {
+            display: flex;
+            margin: 0 rem(-12.5px) 0;
+            padding-top: rem(35.5px);
+            padding-bottom: rem(51.5px);
+        }
+        @include mq(md, max) {
+            padding-top: .4rem;
+            padding-bottom: .48rem;
+        }
+        > li {
+            @include mq(md, min) {
+                width: calc(100% / 3);
+                padding: rem(12.5px);
+            }
+            & + li {
+                @include mq(md, max) {
+                    margin-top: .24rem;
+                }
+            }
+            
+        }
+        a {
+            display: block;
+            position: relative;
+            &:hover {
+                .information__detail {
+                    background: transparent;
+                }
+            }
+            
+        }
+    }
+    &__detail {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: initial;
+        background: rgb(0,0,0,.44);
+        transition: all .3s ease-out;
+        @include mq(md, min) {
+            padding: rem(7px);
+            flex: 1;
+            padding-right: rem(10px);
+        }
+        @include mq(md, max) {
+            padding: .03rem;
+        }
+        
+    }
+    &__title {
+        text-align: center;
+        color: $white;      
+        display: -moz-flex;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: .5s;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        font-family: $font-shipporiMincho;
+        font-weight: $font-semi-bold;
+        @include mq(md, min) {
+            padding: rem(10px);
+            @include font-size(18px);
+            line-height: line-height(26,18);
+            border: rem(1px) solid $white;
+        }
+        @include mq(md, max) {
+            padding: .1rem;
+            font-size: .16rem;
+            line-height: line-height(24,16);
+            border: .01rem solid $white;
+        }
+    }
+    &__img{
+        img {
+            width: 100%;
+        }
+    }
+}

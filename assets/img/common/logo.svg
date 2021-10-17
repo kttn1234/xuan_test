@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="257" height="46" viewBox="0 0 257 46">
+  <g id="Group_85" data-name="Group 85" transform="translate(-122 -32)">
+    <text id="LOGO_LOGO" data-name="LOGO LOGO" transform="translate(173 69)" fill="#fff" font-size="32" font-family="ShipporiMincho-SemiBold, Shippori Mincho" font-weight="600"><tspan x="0" y="0">LOGO </tspan><tspan y="0" fill="#e2a216">LOGO</tspan></text>
+    <g id="Group_84" data-name="Group 84">
+      <g id="Group_83" data-name="Group 83" transform="translate(129.74 42.74)">
+        <rect id="Rectangle_446" data-name="Rectangle 446" width="8.6" height="8.6" transform="translate(6.081 7.74) rotate(45)" fill="#e2a216"/>
+        <rect id="Rectangle_447" data-name="Rectangle 447" width="8.6" height="8.6" transform="translate(21.561 7.74) rotate(45)" fill="#e2a216"/>
+        <rect id="Rectangle_448" data-name="Rectangle 448" width="8.6" height="8.6" transform="translate(13.821 0) rotate(45)" fill="#e2a216"/>
+        <rect id="Rectangle_449" data-name="Rectangle 449" width="8.6" height="8.6" transform="translate(13.821 15.541) rotate(45)" fill="#e2a216"/>
+      </g>
+      <g id="Ellipse_20" data-name="Ellipse 20" transform="translate(122 35)" fill="none" stroke="#e2a216" stroke-width="1">
+        <circle cx="21.5" cy="21.5" r="21.5" stroke="none"/>
+        <circle cx="21.5" cy="21.5" r="21" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>

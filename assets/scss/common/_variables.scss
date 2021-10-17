@@ -1,0 +1,74 @@
+// grid
+$grid-gutter-width: 15px !default;
+$container-width: 1100px !default;
+
+$displays: none, block, flex !default;
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
+) !default;
+
+//font
+$font-Dosis: 'Dosis', sans-serif;
+$font-notosanJP: 'Noto Sans JP', sans-serif;
+$font-roboto: 'Roboto', sans-serif;
+$font-shipporiMincho: 'Shippori Mincho', serif;
+$font-en: $font-Dosis;
+$font-weight-bold: 700;
+$font-semi-bold: 600;
+$font-weight-medium: 500;
+$font-weight-regular: 400;
+$font-weight-light: 300;
+
+$font-size-reset: 16px !default;
+$line-height-reset: 1.5;
+$font-family-base: $font-notosanJP;
+$font-size-base: 14px !default;
+$line-height-base: 1.3571;
+$font-weight-base: $font-weight-regular;
+
+//color
+$dark: #000;
+$black: #888;
+$white: #fff;
+$yellow-01: #E2A216;
+$yellow-02: #CEA563;
+$brown-01: #221500;
+$brown-02: #1A1000;
+$brown-03: #7B7164;
+$gray-01: #F5F5F5;
+$gray-02: #ccc;
+$gray-03: #E8E8E8;
+
+
+$body-color : $black;
+$body-bg: $white !default;
+$border-color: $gray-02 !default;
+
+// Button
+$btn-disabled-opacity: .6;
+$btn-border-width: 1px !default;
+$btn-font-weight: $font-weight-regular;
+$btn-font-family: $font-family-base;
+
+// Table
+$table-th-font-weight: $font-weight-base;
+
+// Form
+$input-height: 64px !default;
+$input-padding-y: 5px !default;
+$input-padding-x: 24px !default;
+$input-font-family: $font-family-base;
+$input-bg: $white;
+$input-border-width: 1px;
+$input-border-color: $border-color;
+$input-color: $brown-01;
+$input-disabled-bg: $gray-01;
+$input-placeholder-color: $brown-01;
+$input-font-size: $font-size-base;
+$input-font-weight: $font-weight-base;
+$input-line-height: 1.5;

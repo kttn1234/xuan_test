@@ -1,0 +1,240 @@
+.header {
+    background-size: cover;
+    font-family: $font-shipporiMincho;
+    color: $white;
+    @include mq(md, min) {
+        background-image: url(../img/common/bg_banner_pc.jpg);
+        height: rem(768px);
+        border: rem(5px) solid $yellow-01;
+    }
+    @include mq(md, max) {
+        background-image: url(../img/common/bg_banner_sp.jpg);
+        height: 6rem;
+        border: .04rem solid $yellow-01;
+    }
+    &__main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include mq(md, min) {
+            padding: rem(22px) rem(34px);
+        }
+        @include mq(md, max) {
+            padding: .12rem .11rem;
+        }
+    }
+    &__logo {
+        a {
+            @include mq(md, max) {
+                width: 1.69rem;
+                display: flex;
+            }
+        }
+        
+    }
+    &__link {
+        font-weight: $font-semi-bold;
+        font-family: $font-shipporiMincho;
+        position: relative;
+        @include mq(md, min) {
+            @include font-size(15px);
+            padding-bottom: rem(6px);
+        }
+        @include mq(md, max) {
+           font-size: .13rem;
+           padding-bottom: .03rem;
+        }
+        &:hover {
+            &::before {
+                content: '';
+                width: 100%;
+                position: absolute;
+                bottom: 0;
+                display: inline-block;
+                background: $white;
+                @include mq(md, min) {
+                    height: rem(1px);
+                }
+                @include mq(md, min) {
+                    height: 1px;
+                }
+            }
+        }
+
+    }
+    &__title {
+        font-weight: $font-weight-bold;
+        @include mq(md, min) {
+            @include font-size(48px);
+            line-height: line-height(70,48);
+            margin-top: rem(151px);
+            margin-bottom: rem(32px);
+            text-align: center;
+        }
+        @include mq(md, max) {
+            text-align: left;
+            font-size: .4rem;
+            line-height: line-height(56,40);
+            margin: .3rem 0 .46rem;
+        }
+    }
+    &__group {
+        @include mq(md, min) {
+            display: flex;
+            flex-wrap: wrap;
+            margin: rem(19px) rem(-12.5px) rem(121px);
+        }
+        @include mq(md, max) {
+            margin-top: .24rem;
+            margin-bottom: .57rem;
+        }
+        
+    }
+    &__group-item {
+        @include mq(md, min) {
+            width: calc(100% / 3);
+            padding: rem(12.5px);
+        }
+        & + .header__group-item {
+            @include mq(md, max) {
+                margin-top: .12rem;
+            }  
+        }
+        
+    }
+    &__scroll {
+        text-align: center;
+    }
+    &__link {
+        display: inline-block;
+    }
+    &__scroll-link {
+        display: inline-block;
+    }
+    &__scroll-text {
+        display: inline-block;
+        font-weight: $font-weight-medium;
+        @include mq(md, min) {
+            font-size: rem(13px);
+            line-height: line-height(19,13);
+            margin-bottom: rem(16px);
+        }
+        @include mq(md, max) {
+            font-size: .11rem;
+            line-height: line-height(16,11);
+            margin-bottom: .08rem;
+        }
+    }
+    &__scroll-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        @include mq(md, min) {
+            width: rem(32px);
+            height: rem(32px);
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            border: rem(1px) solid $white;
+        }
+        @include mq(md, max) {
+            width: .22rem;
+            height: .22rem;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            border: .01rem solid $white;
+        }
+        img {
+            transform: rotate(90deg);
+            -webkit-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
+            @include mq(md, min) {
+                width: rem(9px);
+            }
+            @include mq(md, max) {
+                width: .09rem;
+            }
+        }
+    }
+}
+.container {
+    &--header {
+        @include mq(md, max) {
+            padding-left: .11rem;
+            padding-right: .11rem;
+        }  
+    }
+}
+.hamburger-box {
+    border-left: .1rem solid $border-color;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: auto;
+    height: 7rem;
+    width: 7rem;
+    z-index: 1100;
+
+    &.is-active{
+        .hamburger-inner{
+            transition-delay: .12s;
+            transition-timing-function: cubic-bezier(.215,.61,.355,1);
+            transform: rotate(45deg);
+
+            &:before{
+                transition: top 75ms ease,opacity 75ms ease .12s;
+                opacity: 0;
+                top: 0;
+            }
+            &:after{
+                transition: bottom 75ms ease,transform 75ms cubic-bezier(.215,.61,.355,1) .12s;
+                transform: rotate(-90deg);
+                bottom: 0;
+            }
+        }
+    }
+}
+
+.hamburger-inner:after, .hamburger-inner:before {
+    display: block;
+    content: "";
+}
+
+%ham-inner{
+    width: 2.8rem;
+    height: .2rem;
+    background-color: $black;
+    transition: transform .15s ease;
+    border-radius: 1.5px;
+}
+
+.hamburger-inner {
+    @extend %ham-inner;
+    position: relative;
+    display: block;
+    transition-timing-function: cubic-bezier(.55,.055,.675,.19);
+    transition-duration: 75ms;
+
+    &:before{
+        @extend %ham-inner;
+        position: absolute;
+        top: -.8rem;
+        transition: top 75ms ease .12s,opacity 75ms ease;
+    }
+    &:after{
+        @extend %ham-inner;
+        position: absolute;
+        bottom: -.8rem;
+        transition: bottom 75ms ease .12s,transform 75ms cubic-bezier(.55,.055,.675,.19);
+    }
+}

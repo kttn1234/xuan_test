@@ -1,0 +1,142 @@
+.form-control {
+    display: block;
+    width: 100%;
+    height: $input-height;
+    padding: $input-padding-y $input-padding-x;
+    font-family: $input-font-family;
+    @include font-size($input-font-size);
+    font-weight: $input-font-weight;
+    line-height: $input-line-height;
+    color: $input-color;
+    background-color: $input-bg;
+    background-clip: padding-box;
+    border: $input-border-width solid $input-border-color;
+    // Unstyle the caret on `<select>`s in IE10+.
+    &::-ms-expand {
+        background-color: transparent;
+        border: 0;
+    }
+  
+    // Remove select outline from select box in FF
+    &:-moz-focusring {
+        color: transparent;
+        text-shadow: 0 0 0 $input-color;
+    }
+  
+    // Placeholder
+    &::placeholder {
+        color: $input-placeholder-color;
+        opacity: 1;
+    }
+
+    &:disabled,
+    &[readonly] {
+        background-color: $input-disabled-bg;
+        opacity: 1;
+    }
+}
+
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"] {
+    &.form-control {
+        appearance: none; // Fix appearance for date inputs in Safari
+    }
+}
+input,select,a,button{
+	&:focus,&:active{
+		outline: none;
+	}
+}
+select::-ms-expand {
+	display: none;
+}
+.select-type {
+    position: relative;
+    opacity: .88;
+    font-family: $font-notosanJP;
+    @include mq(md, min) {
+        font-weight: $font-weight-regular;
+    }
+    @include mq(md, max) {
+        font-weight: $font-weight-light;
+    }
+    &::before {
+        content: '';
+        background: rgb(142,98,0);
+        background: linear-gradient(0deg, rgba(142,98,0,1) 0%, rgba(226,162,22,0.8827906162464986) 100%);
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        z-index: 1;
+        height: 100%;
+        @include mq(md, min) {
+            width: rem(40px);
+        }
+        @include mq(md, max) {
+            width: .32rem;
+        }
+    }
+    &::after {
+        content: '';
+        background: url(../img/common/icon_arrow_down_01.png) no-repeat;
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        z-index: 2;
+        @include mq(md, min) {
+            width: rem(16px);
+            height: rem(9px);
+            right: rem(12px);
+            background-size: rem(16px) auto;
+        }
+        @include mq(md, max) {
+            width: .12rem;
+            height: .07rem;
+            background-size: .12rem auto;
+            right: .1rem;
+        }
+    }
+    &__icon-map {
+        background: url(../img/common/icon_map.png) no-repeat;
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        z-index: 1;
+        @include mq(md, min) {
+            width: rem(18px);
+            height: rem(24px);
+            background-size: rem(18px) auto;
+            left: rem(32px);
+        }
+        @include mq(md, max) {
+            width: .14rem;
+            height: .2rem;
+            background-size: .14rem auto;
+            left: .16rem;
+        }
+    }
+    select {
+        border: none;
+        width: 100%;
+        appearance: none;
+        @include mq(md, min) {
+            height: rem($input-height);
+            padding: rem(5px) rem(66px);
+            @include font-size(14px);
+            line-height: line-height(20,14);
+        }
+        @include mq(md, max) {
+            height: .44rem;
+            padding: .05rem .45rem;
+            font-size: .12rem;
+            line-height: line-height(17,12);
+        }
+    }
+
+}

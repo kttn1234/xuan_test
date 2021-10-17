@@ -1,0 +1,12 @@
+.container {
+    margin: auto;
+    @include mq(md, min) {
+        max-width: rem($container-width + $grid-gutter-width*2);
+        padding-left: rem($grid-gutter-width);
+        padding-right: rem($grid-gutter-width);
+    }
+    @include mq(md, max) {
+       padding-left: .15rem;
+       padding-right: .15rem;
+    }
+}
